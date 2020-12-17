@@ -1,0 +1,20 @@
+import com.extreme.wips.WipsApiService.Users;
+import org.springframework.web.bind.annotation.*;
+import java.util.*;
+
+@RestController
+@RequestMapping("/api")
+public class ApiService {
+
+    @GetMapping(value = "/users")
+    public List<Users> getUsers() {
+        List<Users> usersList = new ArrayList<Users>();
+        Users aa = new Users();
+        aa.setId(1);
+        aa.setName("Rathu");
+
+        usersList.add(aa);
+
+        return usersList;
+    }
+}
